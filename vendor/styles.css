@@ -1,0 +1,119 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+.form{
+height:100vh;
+width:100vw;
+display:flex;
+float:right;
+align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+justify-content:center;
+}
+#exampleInputEmail1,#exampleInputPassword1{
+width:300px;
+border-radius:20px;
+}
+
+.login-pic{
+margin:0 auto;
+height:100vh;
+width:50vw;
+display:flex;
+align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+justify-content:center;
+background-image:url("images/slashes.png");
+background-size:inherit;
+}
+
+.login-pic img{
+animation-name:heart;
+animation-duration:2.5s;
+animation-iteration-count: infinite;
+width:300px;
+height:250px;
+}
+.formulario{
+display:flex;
+align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+justify-content:center;
+margin:0 auto;
+border-left:solid 4px rgba(0,0,0,.5);
+height:100vh;
+width:50vw;
+align-content:center;
+
+}
+button{
+display:block;
+margin:0 auto;
+position:relative;
+left:35%;
+border-radius:15px !important; 
+}
+label{
+display: flex;
+align-content:center;
+margin:0 auto;
+color:white;
+}
+
+@-webkit-keyframes heart{
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity:1;
+    }
+  
+    14% {
+      -webkit-transform: scale(.9);
+      transform: scale(.9);
+    }
+  
+    28% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    42% {
+      -webkit-transform: scale(.9);
+      transform: scale(.9);
+      opacity:.3;
+    }
+  
+    70% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity:1;
+    }
+  }
+  
+
+  
+      
+ @media (min-width:300px)and (max-width:568px){
+ .login-pic{
+ display:none;
+ }
+ .formulario{
+ border:none;
+width:100vw;
+height:100vh;
+background-image:url("images/slashes.png");
+ }
+
+ p,h1{
+ color:white;
+ }
+ h1{  
+ animation-name:heart;
+animation-duration:2.5s;
+animation-iteration-count: infinite;
+transition:1s;
+ margin-top:-2em;
+ margin-bottom:2em;
+ }
+ #exampleInputEmail1,#exampleInputPassword1{
+width:220px;
+ }
