@@ -3,6 +3,11 @@
 	padding: 0px; 
 	box-sizing: border-box;
 }
+body{
+background-image: url("/img/blurred-04.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+}
 .form{
 height:100vh;
 width:100vw;
@@ -11,52 +16,73 @@ float:right;
 align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
 justify-content:center;
 }
-#exampleInputEmail1,#exampleInputPassword1{
+
+input[type=email],input[type=password],input[type=text]{
 width:300px;
-border-radius:20px;
+border:none;
+border-bottom:2px solid rgba(255, 255, 255, 0.671);
+background:none;
+margin-bottom:20px;
+outline: none;
+
 }
 
+  
 .login-pic{
 margin:0 auto;
-height:100vh;
-width:50vw;
+padding:0;
+height:80vh;
+width:35vw;
 display:flex;
-align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+align-items:center;
+ /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
 justify-content:center;
-background-image:url("images/slashes.png");
+background-color: rgba(128, 245, 206, 0.5);
 background-size:inherit;
+border-radius:5px  ;
+border-color: white;
+position: relative;
+left:7%;
 }
 
 .login-pic img{
-animation-name:heart;
-animation-duration:2.5s;
+animation-name:rotate;
+animation-duration:5s;
 animation-iteration-count: infinite;
-width:300px;
+opacity:.7;
+width:250px;
 height:250px;
 }
 .formulario{
+  color:rgba(255, 255, 255, 0.671);
+border-radius:5px;
 display:flex;
-align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
-justify-content:center;
+float:left;
+align-items:center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+justify-content:left;
 margin:0 auto;
+padding:0;
 border-left:solid 4px rgba(0,0,0,.5);
-height:100vh;
-width:50vw;
+height:80vh;
+width:35vw;
 align-content:center;
-
+background-color:rgba(0, 0, 0, 0.562);
+position: relative;
+right:8%;
 }
-button{
-display:block;
-margin:0 auto;
-position:relative;
-left:35%;
+form{
+margin-left:10%;
+}
+input[type=submit]{
+background-color: transparent;
 border-radius:15px !important; 
 }
-label{
-display: flex;
-align-content:center;
-margin:0 auto;
-color:white;
+
+
+.form-check{
+/*display:flex;
+justify-content: right;
+justify-items: right;*/
 }
 
 @-webkit-keyframes heart{
@@ -88,8 +114,30 @@ color:white;
       opacity:1;
     }
   }
-  
 
+  @-webkit-keyframes rotate{
+    0% {
+      
+      transform:rotate(0deg);
+    }
+    /*20% {
+      
+      transform:rotate(72deg);
+    }*/
+    50% {
+      transform: rotate(180deg);
+     
+    }
+    
+
+   
+    
+   100%{
+    transform: rotate(360deg);
+   }
+  
+  }
+ 
   
       
  @media (min-width:300px)and (max-width:568px){
@@ -98,13 +146,14 @@ color:white;
  }
  .formulario{
  border:none;
-width:100vw;
+min-width:100vw;
 height:100vh;
-background-image:url("images/slashes.png");
+position: relative;
+left:0;
  }
 
  p,h1{
- color:white;
+ color:whitesmoke;
  }
  h1{  
  animation-name:heart;
@@ -117,3 +166,4 @@ transition:1s;
  #exampleInputEmail1,#exampleInputPassword1{
 width:220px;
  }
+}

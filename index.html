@@ -4,34 +4,41 @@
 	<title>Login V1</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/styles.css">
+	<link  rel="stylesheet" type="text/css" href="img/styles.css"><!--primero rel despues type y despues href MUY MUY importante..demasiado.-->
 </head>
 <body>
 <div class="form">
-<div class="login-pic js-tilt " data-tilt>
-<img src="images/img-01.png" alt="IMG">
+<div class="login-pic js-tilt ">
+
+<img src="img/planeta.png" alt="IMG">
 </div>
 <div class="formulario">
-
-<form>
- <h1 class="text-center">Bienvenido</h1>
-  <div class="form-group">
-    <p class="text-center">Usuario</p>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <p class="text-center" for="exampleInputPassword1">Contraseña</p>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-success ">Entrar</button>
+<form action="ingresar.php" method="POST">
+ <h2 class="text-left">Sign up</h2>
+  
+    <p class="text-left">Usuario</p>
+    <input type="email" class="form-control" name="user" placeholder="Enter email">
+  
+    <p class="text-left" for="exampleInputPassword1">Contraseña</p>
+    <input type="password" class="form-control" name="password" placeholder="Password" id="contraseña">
+	<div class="form-check">
+	
+	<input type="checkbox" class="form-check-input"   id="mostrar" class="bg-info">
+	<label >Check me out</label>
+	  </div>
+	<input type="submit" class="btn btn-success " value="entrar" >
 </form>
+
 </div>
+
 </div>
+Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+<script src="mostrar.js"></script>
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
