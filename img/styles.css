@@ -9,6 +9,7 @@ background-size:cover;
 background-repeat: no-repeat;
 }
 .form{
+
 height:100vh;
 width:100vw;
 display:flex;
@@ -16,19 +17,41 @@ float:right;
 align-items: center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
 justify-content:center;
 }
-
+.form-check{
+display:flex;
+float:right;
+}
+.form-check label{
+position:relative;
+top:-3px;
+}
 input[type=email],input[type=password],input[type=text]{
 width:300px;
 border:none;
 border-bottom:2px solid rgba(255, 255, 255, 0.671);
 background:none;
 margin-bottom:20px;
+margin-top:20px;
 outline: none;
-
+color:rgba(255, 255, 255, 0.671);
+}
+input[type=email]:focus{
+background:none;
+}
+input[type=password]:focus{
+background:none;
 }
 
+input[type=text]:focus{
+background:none;
+color:rgba(255, 255, 255, 0.671);
+}
+input[type=checkbox]{
+background-color: rgba(128, 245, 206, 0.5);
+}
   
 .login-pic{
+box-shadow:10px 10px 20px 0px rgba(255, 255, 255,0.3);
 margin:0 auto;
 padding:0;
 height:80vh;
@@ -37,9 +60,13 @@ display:flex;
 align-items:center;
  /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
 justify-content:center;
-background-color: rgba(128, 245, 206, 0.5);
+background-color: rgba(128, 245, 206, 0.69);
 background-size:inherit;
-border-radius:5px  ;
+border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+border-top-right-radius:0;
+border-bottom-right-radius:0;
+
 border-color: white;
 position: relative;
 left:7%;
@@ -48,14 +75,19 @@ left:7%;
 .login-pic img{
 animation-name:rotate;
 animation-duration:5s;
+
 animation-iteration-count: infinite;
-opacity:.7;
+opacity:.5;
 width:250px;
 height:250px;
 }
 .formulario{
-  color:rgba(255, 255, 255, 0.671);
-border-radius:5px;
+box-shadow:10px 10px 20px 0px rgba(255, 255, 255,0.3);
+color:rgba(255, 255, 255, 0.671);
+border-top-left-radius:0;
+border-bottom-left-radius:0;
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;
 display:flex;
 float:left;
 align-items:center; /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
@@ -66,23 +98,47 @@ border-left:solid 4px rgba(0,0,0,.5);
 height:80vh;
 width:35vw;
 align-content:center;
-background-color:rgba(0, 0, 0, 0.562);
+background-color:rgba(0, 0, 0,.8);
 position: relative;
 right:8%;
 }
 form{
 margin-left:10%;
 }
+input[type=button]{
+background-color: rgba(128, 245, 206, 0.5);
+border-radius:15px !important;
+}
+#registrarse{
+position:absolute;
+top:1em;
+right:1em;
+}
 input[type=submit]{
-background-color: transparent;
-border-radius:15px !important; 
+background-color: rgba(128, 245, 206, 0.5);
+border-radius:15px !important;
+margin-bottom:20px;
+margin-top:20px;
 }
 
-
-.form-check{
-/*display:flex;
-justify-content: right;
-justify-items: right;*/
+input[type=submit]:hover{
+background-color: rgba(128, 245, 206, 0.5); 
+}
+input[type=button]:hover{
+background-color: rgba(128, 245, 206, 0.5); 
+}
+#mostrar{ /*coloca el boton mostrar contraseña dentro del input text contraseña*/
+width:30px;
+height:30px;
+display:block;
+position:relative;
+top:-3.1em;
+left:90%;
+}
+#gmail{
+border-radius:15px;
+width:100px;
+height:70px;
 }
 
 @-webkit-keyframes heart{
@@ -117,7 +173,7 @@ justify-items: right;*/
 
   @-webkit-keyframes rotate{
     0% {
-      
+      opacity:1;
       transform:rotate(0deg);
     }
     /*20% {
@@ -125,8 +181,9 @@ justify-items: right;*/
       transform:rotate(72deg);
     }*/
     50% {
+      transition:10s;
       transform: rotate(180deg);
-     
+      opacity:.5;
     }
     
 
@@ -134,6 +191,7 @@ justify-items: right;*/
     
    100%{
     transform: rotate(360deg);
+    opacity:1;
    }
   
   }
@@ -150,20 +208,9 @@ min-width:100vw;
 height:100vh;
 position: relative;
 left:0;
+
  }
 
- p,h1{
- color:whitesmoke;
- }
- h1{  
- animation-name:heart;
-animation-duration:2.5s;
-animation-iteration-count: infinite;
-transition:1s;
- margin-top:-2em;
- margin-bottom:2em;
- }
- #exampleInputEmail1,#exampleInputPassword1{
-width:220px;
- }
+ 
+
 }
