@@ -1,6 +1,18 @@
 
 let boton=document.getElementById("mostrar")
 boton.click=true;
+let terminos=document.getElementById("terms")
+terminos.checked="false"
+let registro=document.getElementById("SignUp")
+terminos.addEventListener("click",function check(){
+if (terminos.checked==true) {
+registro.active
+}
+else{
+registro.disable
+}
+}
+)
 let tipo = document.getElementById("contraseña");
 boton.addEventListener("click",
 	function mostrar(){
