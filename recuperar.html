@@ -7,17 +7,21 @@
 	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link  rel="stylesheet" type="text/css" href="img/styles.css"><!--primero rel despues type y despues href MUY MUY importante..demasiado.-->
+	<link  rel="stylesheet" type="text/css" href="img/recuperar.css"><!--primero rel despues type y despues href MUY MUY importante..demasiado.-->
 </head>
 <body>
-<span class=" text-center text-white">ingrese su email para que se genere al azar una nueva contraseña y pueda ser enviada a su cuenta para que pueda acceder y cambiar la contraseña desde la plataforma</span>
-
-<form action="ingresar.php" method="POST">
+<div class="text-password">
+<p class=" text-white">ingrese su email para que se le envie un link donde podra reestablacer su contraseña.</p>
+<form action="reestablacer.php" method="POST">
 <input type="email" class="form-control" name="user" placeholder="Enter email">
 
 <input type="submit" class="btn btn-success" value="Send">
 
 </form>
-
+</div>
+<script src="mostrar.js"></script>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap/js/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

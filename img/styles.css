@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body{
-background-image: url("/img/blurred-04.jpg");
+background-color: lightcoral;
 background-size:cover;
 background-repeat: no-repeat;
 }
@@ -36,7 +36,7 @@ background:none;
 margin-bottom:20px;
 margin-top:20px;
 outline: none;
-color:rgba(255, 255, 255, 0.671);
+color:rgba(255, 255, 255, 0.671) !important;
 }
 input[type=email]:focus{
 background:none;
@@ -218,14 +218,11 @@ top:2px;
   
       
  @media (min-width:300px)and (max-width:568px){
- body{
  
- }
  .login-pic{
  display:none;
  }
  .formulario{
-  color:;
  border:none;
 min-width:100vw;
 height:100vh;

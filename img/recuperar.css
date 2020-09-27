@@ -1,0 +1,42 @@
+body{
+    background-color: lightcoral;
+    
+}
+
+
+.text-password{
+    color:rgba(255, 255, 255, 0.671);
+    display:block;
+    /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+    
+    margin:0 auto;
+    padding:0;
+    border-left:solid 4px rgba(0,0,0,.5);
+    height:40vh;
+    width:40vw;
+  
+    background-color:rgba(0, 0, 0,.8);
+     /* jackInTheBox centrar div d-flex justify-content-center y align-items center */
+   
+    
+    
+    }
+    input[type=email],input[type=password],input[type=text]{
+        width:300px;
+        border:none;
+        border-bottom:2px solid rgba(255, 255, 255, 0.671);
+        background:none;
+        margin-bottom:20px;
+        margin-top:20px;
+        outline: none;
+        color:rgba(255, 255, 255, 0.671) !important;
+        }
+        input[type=email]:focus{
+        background:none;
+        }
+        input[type=submit]{
+            
+            border-radius:15px !important;
+            margin-bottom:15px;
+            margin-top:12px;
+            }

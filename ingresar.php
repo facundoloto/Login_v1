@@ -12,15 +12,15 @@ else{
   $contraseña=$_POST["password"];
 
 try{
-$sql="select*from login where usuario='$usuario'";//busca los registro en base el usuario ingresado,esto es para que la contraseña que se valide sea la de ese usuario y no la de otro
+$sql="select*from registrarse where email='$usuario'";//busca los registro en base el usuario ingresado,esto es para que la contraseña que se valide sea la de ese usuario y no la de otro
 $consulta= $connection->prepare($sql);//$connection es el objeto de la clase conexion,el metodo prepare guarda una consulta
 $consulta->execute(); //la consulta se guarda en la variable consulta y herede los metodos de la objeto conection,execute ejecuta la cosnsulta
 $resultado=$consulta->fetchAll();//resultado es una variable y fetch all lo que hace es guardar todos los indices y datos de la consulta
 $array_num = count($resultado);
 for ($i = 0; $i < $array_num; ++$i){ //for recore el usuario y contraseña que se ingreso
-if($usuario==$resultado[$i]['usuario']){ //primero registra si el usuario es el correcto
+if($usuario==$resultado[$i]['email']){ //primero registra si el usuario es el correcto
   $activo_User=true; //usuario encontrado pasa al siguiente if
-  if($contraseña==$resultado[$i]['contraseña']){ // y si es verdadero compara contraseña del formulario coincide con la del usuario
+  if($contraseña==$resultado[$i]['password']){ // y si es verdadero compara contraseña del formulario coincide con la del usuario
     $activo_Pass=true; //contraseña encontrada
   }
   //segundo if

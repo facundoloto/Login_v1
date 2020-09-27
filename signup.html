@@ -17,22 +17,30 @@
 </div>
 <div class="formulario">
 <a href="index.html"><input type="button" class="btn btn-success" value="Sign In" id="registrarse"></a>
-<form action="ingresar.php" method="POST">
+<form action="registrarse.php" method="POST">
  <h2 class="text-left">Sign Up</h2>
  <p class="text-left" for="exampleInputPassword1">Name</p>
- <input class="form-control" type="text" placeholder="Name user" id="name">
+ <input class="form-control" type="text" placeholder="Name user" required name="name">
  <p class="text-left">Email</p>
-<input type="email" class="form-control" name="user" placeholder="Enter email">
+<input type="email" class="form-control" name="user" required placeholder="Enter email">
  <p class="text-left" for="exampleInputPassword1">Password</p>
-<input type="password" class="form-control" name="password" placeholder="Password" id="contraseña">
+<input type="password" class="form-control" name="password" placeholder="Password" id="contraseña" required title="minimo 8 caracteres y maximo 16" maxlength="20"" >
+<script>
+	function caracteres(){
+	var input = document.getElementById('contraseña');
+	if(input.value.length < 8) {
+	alert('Escribe más de 8 carácteres.');
+	}
+	}
+	</script>
 <img src="img/eyes.png" id="mostrar">
 <div class="terminos">
 <label><input type="checkbox" id="terms"> I agree to terms and service</label>
 </div>
 <div class="enter">
-<input type="submit" class="btn btn-success" value="Sign Up" id="SignUp" disabled>
+<input type="submit" class="btn btn-success" value="Sign Up" id="SignUp" >
 <span>Or Sign Up with</span>
-<a href=""> <img src="/img/gmail2.png" id="gmail"></a>
+<a href=""> <img src="img/gmail2.png" id="gmail"></a>
 <div>
 </form>
 
